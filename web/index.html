@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- http://fl016.web.fc2.com/ -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>WEB SITE</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen,print" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+    <a href="http://fl016.web.fc2.com/ "><div id="header">FC2Webホスティングのテストページ
+    </div></a>
+    
+
+    <div id="contentsWrap" class="clearfix;">
+        
+        <div id="leftContents" >
+            <a href=""><div>Unity / UnityApplication</div></a>
+            <a href=""><div>ダウンロード</div></a>
+        </div>
+
+        <div id="rightContents">Unity / UnityApplication
+            <div id="iframeBox">
+                <iframe src="https://fl016.github.io/unityApp/unityApp.html" frameborder="0" scrolling="no" width="700" height="450"></iframe>
+            </div>
+
+            <br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />
+            <div id="consoleLog"></div>
+        </div>
+
+        <div id="footer">
+            footer
+        </div>
+
+        <div class="clearfix;"></div>
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", scrollContlole);
+        window.addEventListener("resize", scrollContlole);
+
+        function scrollContlole() {
+            var elem = document.getElementById("leftContents");
+            var hElem = document.getElementById("header");
+
+            if (window.innerHeight >= (elem.offsetHeight + hElem.offsetHeight)) {
+                if (window.pageYOffset >= hElem.offsetHeight) {
+                    elem.style.position = "fixed";
+                    elem.style.top = 0;
+                    elem.style.bottom = "";
+
+                } else if(window.pageYOffset < hElem.offsetHeight){
+                    elem.style.position = "absolute";
+                    elem.style.top = "";
+                    elem.style.bottom = "";
+
+                } else {
+                    false;
+
+                };
+
+            } else if (window.innerHeight < (elem.offsetHeight + hElem.offsetHeight)) {
+                if ((window.pageYOffset + window.innerHeight - hElem.offsetHeight) <= elem.offsetHeight) {
+                    elem.style.position = "absolute";
+                    elem.style.top = "";
+                    elem.style.bottom = "";
+
+                } else if ((window.pageYOffset + window.innerHeight - hElem.offsetHeight) > elem.offsetHeight) {
+                    elem.style.position = "fixed";
+                    elem.style.top = "";
+                    elem.style.bottom = 0;
+
+                } else {
+                    false;
+
+                };
+
+            } else {
+                false;
+
+            };
+
+        };
+    </script>
+</body>
+</html>
