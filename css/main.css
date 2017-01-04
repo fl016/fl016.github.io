@@ -54,37 +54,37 @@ a:visited {
 
 
 /*--------------------------------------------------------------------------------------*/
-#header {
+.header {
     width:100%;
 
 }
 
 
-#contentsWrap {
+.contentsWrap {
     overflow:hidden;
 
 }
 
-#leftContents {
+.leftContents {
     position:absolute;
     width:250px;
 
 }
 
 
-#rightContents {
+.rightContents {
     width:auto;
     min-width:500px;
     position:relative;
     left:270px;
 }
 
-#iframeBox{
+.iframeBox{
     
 }
 
 
-#footer {
+.footer {
     position:relative;
     left:270px;
     color:white;

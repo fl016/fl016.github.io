@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- http://fl016.web.fc2.com/ -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Offer</title>
+    <link rel="stylesheet" href="https://fl016.github.io/css/main.css" type="text/css" media="screen,print" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+    <div class="header">
+    <a href="http://fl016.web.fc2.com/ "><span>ご依頼フォーム</span></a>
+    </div>
+
+    <div class="clearfix, contentsWrap">
+        
+        <div class="leftContents" >
+            <a href=""><div>UnityApplication</div></a>
+            <a href=""><div>Download</div></a>
+        </div>
+
+        <div class="rightContents">UnityApplication
+        <!--
+            <div class="iframeBox">
+                <iframe src="https://fl016.github.io/unityApp/unityApp.html" frameborder="0" scrolling="no" width="700" height="450"></iframe>
+            </div> 
+            -->
+
+            <br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />・<br />
+            <div id="consoleLog"></div>
+        </div>
+
+        <div class="footer">
+            footer
+        </div>
+        
+
+        <div class="clearfix;"></div>
+    </div>
+
+
+    
+
+    <script type="text/javascript">
+
+        var scrollContlole = function () {
+
+            var elem = document.getElementsByClassName("leftContents");
+            var hElem = document.getElementsByClassName("header");
+
+            if (window.innerHeight >= (elem[0].offsetHeight + hElem[0].offsetHeight)) {
+                if (window.pageYOffset >= hElem[0].offsetHeight) {
+                    elem[0].style.position = "fixed";
+                    elem[0].style.top = 0;
+                    elem[0].style.bottom = "";
+
+                } else if (window.pageYOffset < hElem[0].offsetHeight) {
+                    elem[0].style.position = "absolute";
+                    elem[0].style.top = "";
+                    elem[0].style.bottom = "";
+
+                } else {
+                    false;
+
+                };
+
+            } else if (window.innerHeight < (elem[0].offsetHeight + hElem[0].offsetHeight)) {
+                if ((window.pageYOffset + window.innerHeight - hElem[0].offsetHeight) <= elem[0].offsetHeight) {
+                    elem[0].style.position = "absolute";
+                    elem[0].style.top = "";
+                    elem[0].style.bottom = "";
+
+                } else if ((window.pageYOffset + window.innerHeight - hElem[0].offsetHeight) > elem[0].offsetHeight) {
+                    elem[0].style.position = "fixed";
+                    elem[0].style.top = "";
+                    elem[0].style.bottom = 0;
+
+                } else {
+                    false;
+
+                };
+
+            } else {
+                false;
+
+            };
+
+            
+        };
+        window.addEventListener("scroll", scrollContlole, false);
+    </script>
+</body>
+</html>
